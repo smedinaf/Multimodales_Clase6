@@ -57,8 +57,8 @@ st.write(" La acción es:" , set_mod)
 
 
 with st.sidebar:
-    st.subheader("Configura la modalidad")
+    st.subheader("Elige tu modalidad")
     mod_radio = st.radio(
-        "Escoge la modalidad a usar",
+        "Escoge la modalidad que deseas usar",
         ("Visual", "Auditiva","Háptica")
     )
