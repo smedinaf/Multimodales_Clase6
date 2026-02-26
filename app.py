@@ -44,15 +44,15 @@ else:
 
 st.subheader("Selectbox")
 in_mod = st.selectbox(
-    "Selecciona la modalidad",
-    ("Audio", "Visual", "Háptico"),
+    "Selecciona el color de tu conejo",
+    ("Cafe", "Blanco", "Gris"),
 )
-if in_mod == "Audio":
-    set_mod = "Reproducir audio"
-elif in_mod == "Visual":
-    set_mod = "Reproducir video"
-elif in_mod == "Háptico":
-    set_mod = "Activar vibración"
+if in_mod == "Cafe":
+    set_mod = "Tu conejo se llamará Canela"
+elif in_mod == "Blanco":
+    set_mod = "Tu conejo se llamará Algodón"
+elif in_mod == "Gris":
+    set_mod = "Tu conejo se llamará Motita"
 st.write(" La acción es:" , set_mod)
 
 
