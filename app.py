@@ -16,21 +16,49 @@ st.subheader("Probemos con 2 columnas")
 col1, col2 = st.columns(2)
 
 with col1:
-  st.subheader("Esta es la primera columna")
-  st.write("Las interfaces mejoran la experiencia del usuario")
+  st.subheader("¿Cuánto sabes sobre los conejos?")
+  st.write("Los conejos comen zanahoria")
   resp = st.checkbox('De acuerdo')
   if resp:
     st.write('Correcto!')
 
 with col2:
-  st.subheader("Esta es la segunda columna")
-  modo = st.radio("¿Qué modalidad es la principal en tu interfaz?",("Visual", "Auditiva", "Táctil"))
+  st.subheader("Sobre preferencia")
+  modo = st.radio("¿Cuál es la mejor forma de tener un conejo?",("En casa", "En una finca", "Al aire libre"))
 
-  if modo == "Visual":
-        st.write("La vista es fundamental para tu interfaz")
+  if modo == "En casa":
+        st.write("En casa es la mejor forma de que viva un conejo")
 
-  elif modo == "Auditiva":
-        st.write("La audición es fundamental para tu interfaz")
+  elif modo == "En una finca":
+        st.write("En una finca es la mejor forma de que viva un conejo")
 
-  elif modo == "Táctil":
-        st.write("El tacto es fundamental para tu interfaz")
+  elif modo == "Al aire libre":
+        st.write("Al aire libre es la mejor forma de que viva un conejo")
+
+
+st.subheader("¿Tienes conejos?")
+if st.button('Selecciona el botón'):
+    st.write('Gracias por presionar')
+else:
+    st.write('No has presionado aún')
+
+st.subheader("Selectbox")
+in_mod = st.selectbox(
+    "Selecciona la modalidad",
+    ("Audio", "Visual", "Háptico"),
+)
+if in_mod == "Audio":
+    set_mod = "Reproducir audio"
+elif in_mod == "Visual":
+    set_mod = "Reproducir video"
+elif in_mod == "Háptico":
+    set_mod = "Activar vibración"
+st.write(" La acción es:" , set_mod)
+
+
+with st.sidebar:
+    st.subheader("Configura la modalidad")
+    mod_radio = st.radio(
+        "Escoge la modalidad a usar",
+        ("Visual", "Auditiva","Háptica")
+    )
