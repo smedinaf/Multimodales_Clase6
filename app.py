@@ -42,7 +42,7 @@ if st.button('Selecciona el botón'):
 else:
     st.write('No has presionado aún')
 
-st.subheader("Selectbox")
+st.subheader("Elige el nombre de tu peludito")
 in_mod = st.selectbox(
     "Selecciona el color de tu conejo",
     ("Cafe", "Blanco", "Gris"),
